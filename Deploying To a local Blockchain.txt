@@ -10,7 +10,6 @@ This is where we learn how to deploy to a local  blockchain using foundry, There
    CLEAR ZSH HISTORY
    Also clear history in zsh by "history -c"
    
-
 2.The second way to deploy a contract is by writing scripts,when we are deploying our code we want to make sure we have a continous reproducable way to deploy our smartcontracts
 
 And when we test the our code in future we want to test our code in future , we want it to test our deployments processes as well as the code
