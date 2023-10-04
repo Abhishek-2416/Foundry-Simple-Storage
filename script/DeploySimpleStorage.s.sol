@@ -14,9 +14,6 @@ contract DeploySimpleStorage is Script{
         return simpleStorage;
     }
 }
-
-
-
 /*-----------------------------------------------------------------------------------NOTES----------------------------------------------------------------------------------
 The second way to deploy a contract is by writing scripts,when we are deploying our code we want to make sure we have a continous reproducable way to deploy our smartcontracts
 
