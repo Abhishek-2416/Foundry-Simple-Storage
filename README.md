@@ -64,3 +64,7 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+## When we go forge compile it compiles the contract obv but also creates some files 
+## In the out folder it contains the json file which has all the abi and all
+## In cache folder
