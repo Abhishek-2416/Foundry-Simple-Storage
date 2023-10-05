@@ -21,14 +21,26 @@ And when we test the our code in future we want to test our code in future , we 
 Solidity as contract language and Solidity as scripting language are different,Foundry has built in stuff which gives solidity even more functionality outside just smartcontracts
 
 After we have written the script we need to type in cli 
-forge script script/DeploySimpleStorage.s.sol
+
+** forge script script/DeploySimpleStorage.s.sol ** 
+
 Here we might ask we dont have local blockchain running so where does it deploy to,
 In Foundry if we dont specify and RPC it will automatically deploy on temporary anvil blockchain
 
 And if we type 
-forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545
+
+**forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545**
+
 If we just do this and it will complete Simulation 
 By doing this we get new folder named brodcast which gives information about our previous deployments
+
+Now if we completely want to deploy it we should type in the command line
+
+** forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545 --broadcast --private-key (Enter the private key)
+
+ONCHAIN EXECUTION COMPLETE AND SUCCESSFULL
+
+
 The run.json files contain all details about the transaction hash contractName etc
 "transaction": {
         "type": "0x02",
@@ -44,6 +56,7 @@ Whenever we do forge script or forge create this the data we are actually sendin
 
 As we can see here the gas value is 0x714e1 which is in hexadecimal so this is easiest method to convert this hexadecimal value
 In cli type cast --to-base 0x714e1 dec this will convert hexadecimal to decimal so we get 464097
+
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
