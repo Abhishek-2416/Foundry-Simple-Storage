@@ -3,17 +3,17 @@ This is where we learn how to deploy to a local  blockchain using foundry, There
 1. Command line
    The first way is by doing it using command line
 
-   ** forge create (name of the contract) --rpc-url http://127.0.0.1:8545 --private-key (Enter the private key) **
+   **forge create (name of the contract) --rpc-url http://127.0.0.1:8545 --private-key (Enter the private key)**
 
    Things that we should avoid pasting up our private key in plain text can be big big mistake so never do it with real account
    
    CLEAR ZSH HISTORY
    Also clear history in zsh by "history -c"
    
-2.The second way to deploy a contract is by writing scripts,when we are deploying our code we want to make sure we have a continous reproducable way to deploy our smartcontracts
+2. The second way to deploy a contract is by writing scripts,when we are deploying our code we want to make sure we have a continous reproducable way to deploy our smart contracts
 
 And when we test the our code in future we want to test our code in future , we want it to test our deployments processes as well as the code
-Solidity as contract language and Solidity as scripting language are different,Foundry has built in stuff which gives solidity even more functionality outside just smartcontracts
+Solidity as contract language and Solidity as scripting language are different,Foundry has built in stuff which gives solidity even more functionality outside just smart contracts
 
 After we have written the script we need to type in cli 
 
@@ -31,7 +31,7 @@ By doing this we get new folder named brodcast which gives information about our
 
 Now if we completely want to deploy it we should type in the command line
 
-** forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545 --broadcast --private-key (Enter the private key)
+**forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545 --broadcast --private-key (Enter the private key)**
 
 ONCHAIN EXECUTION COMPLETE AND SUCCESSFULL
 
@@ -52,5 +52,12 @@ Whenever we do forge script or forge create this the data we are actually sendin
 As we can see here the gas value is 0x714e1 which is in hexadecimal so this is easiest method to convert this hexadecimal value
 In cli type 
 
-** cast --to-base 0x714e1 dec this will convert hexadecimal to decimal so we get 464097
+**cast --to-base 0x714e1 dec this will convert hexadecimal to decimal so we get 464097**
 
+
+3. To deploy the contract without revealing the private key 
+    
+   - First we need to use the command **cast wallet import defaultKey --interactive** Here then we need to enter the private key and the password
+   - Then to use the private key secretly without revealing anything we need to type 
+   - **forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545 --account defaultKey --sender 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266       --broadcast -vvvv**
+   - 
