@@ -1,0 +1,1 @@
+When we type forge build or forge compile the foundry creates an out folder and which consists of a JSON file which will comnsists of the ABI of the contract which we had compiled
