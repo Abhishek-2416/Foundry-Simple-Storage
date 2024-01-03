@@ -38,6 +38,8 @@ There are two methods of doing it
   this will provide us in hex code again so we again need to run the command 
 
   **cast --to-base 0x714e1 dec this will convert hexadecimal to decimal so we get 464097**
+
+  
   
 
   
