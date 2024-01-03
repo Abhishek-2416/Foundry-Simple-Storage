@@ -11,7 +11,9 @@ There are two methods of doing it
 1.Using Command line
   Here we need to use the send , which takes arguments the address the signature(which here is the function type and uint type) and the arguments or value we need to pass
 
-  ** cast send 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 "store(uint256)" 123 --rpc-url $RPC_URL --private-key $PRIVATE_KEY**
+  The Cast send is used to sign and publish the transaction
+
+  **cast send 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 "store(uint256)" 123 --rpc-url $RPC_URL --private-key $PRIVATE_KEY**
 
   which will provide us with :-
 
@@ -31,11 +33,11 @@ There are two methods of doing it
 
   Now to read this we need to type "cast call" which takes the arguments exact same as "cast send"
 
-  ** cast call "CONTRACT ADDRESS" "function name"  **
+  **cast call "CONTRACT ADDRESS" "function name"**
 
   this will provide us in hex code again so we again need to run the command 
 
-  **cast --to-base 0x714e1 dec this will convert hexadecimal to decimal so we get 464097
+  **cast --to-base 0x714e1 dec this will convert hexadecimal to decimal so we get 464097**
   
 
   
